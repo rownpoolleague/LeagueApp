@@ -63,15 +63,15 @@
 
 <script>
     // PASTE YOUR GOOGLE DEPLOYMENT URL HERE
-    const GOOGLE_URL = "YOUR_GOOGLE_DEPLOYMENT_URL_HERE";
+    const GOOGLE_URL = "https://script.google.com/macros/s/AKfycbyuOCGak8yLXmXzhevqnATNx4JRbzGa8dw2EsvJs4r0ADV6wEScNnXfhzcFlC7C5RhA/exec";
 
     const RULES = {
         brackets: [
             { max: 2.0, hc: 7 },
             { max: 3.0, hc: 6 },
             { max: 4.0, hc: 5 },
-            { max: 5.5, hc: 4 },
-            { max: 7.0, hc: 3 },
+            { max: 6.0, hc: 4 },
+            { max: 8.0, hc: 3 },
             { max: 99.0, hc: 2 }
         ],
         e8Penalty: 2,
@@ -83,7 +83,7 @@
         if (!nameInput) return;
 
         try {
-            const response = await fetch(GOOGLE_URL);
+            const response = await fetch("https://script.google.com/macros/s/AKfycbyuOCGak8yLXmXzhevqnATNx4JRbzGa8dw2EsvJs4r0ADV6wEScNnXfhzcFlC7C5RhA/exec");
             const data = await response.json();
             const rows = data.slice(1); // Remove header row
 
